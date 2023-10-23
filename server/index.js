@@ -1,12 +1,14 @@
 import express from "express";
-
+import logger from "morgan";
 
 const port = process.env.PORT ?? 3000;
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("<h1>This is a chat</h1>");
+app.use(logger('dev'));
+
+app.get('/', (req, res) => {
+  res.sendFile(process.cwd() + '/client/index.html');
 });
 
 app.listen(port, () => {

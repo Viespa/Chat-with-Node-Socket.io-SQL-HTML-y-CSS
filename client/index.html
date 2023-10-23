@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViespaChat</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #f5f5f5;
+            display: grid;
+            place-content: center;
+            height: 100vh;
+            padding: 36px;
+            grid-template-rows: 1fr;
+        }
+
+        #chat {
+            display: grid;
+            grid-template-rows: 1fr auto;
+            height: 100%;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 4px rgba(0,0,0,.1);
+            border: 1px solid rgba(0,0,0,.1);
+
+        }	
+        :root{
+            color-scheme: light dark;
+        }
+    </style>
+</head>
+<body>
+    <section id="chat">
+        <form id="form">
+            <input type="text" name="message" id="message" placeholder="Type your message here..." autocomplete="off">
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</body>
+</html>
