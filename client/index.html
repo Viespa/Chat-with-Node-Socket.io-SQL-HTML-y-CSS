@@ -32,20 +32,55 @@
             display: grid;
             grid-template-rows: 1fr auto;
             height: 100%;
-            width: 100%;
+            width: 350px;
             max-width: 480px;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 4px rgba(0,0,0,.1);
             border: 1px solid rgba(0,0,0,.1);
-
+            position: relative;
         }	
+
+        #form{
+            display: flex;
+            bottom: 0;
+            height: 48px;
+            left: 0;
+            padding: 4px;
+            position: absolute;
+            right: 0;
+        }
+
+        #input{
+            border: 1px solid rgba(0,0,0,.1);
+            border-radius: 4px;
+            padding: 8px;
+            outline: none;
+            flex: 1;
+        }
+
+        #input:focus{
+           outline: 0;
+        }
+
+        #form > button {
+            background-color: #007bff;
+            border: 0;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 8px;
+            padding: 8px 16px;
+            transition: background-color .2s ease-in-out;
+        }
     </style>
 </head>
 <body>
     <section id="chat">
         <form id="form">
-            <input type="text" name="message" id="message" placeholder="Type your message here..." autocomplete="off">
+            <input type="text" name="message" id="input" placeholder="Type your message here..." autocomplete="off">
             <button type="submit">Send</button>
         </form>
     </section>
