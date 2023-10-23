@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ViespaChat</title>
+    <script type="module">
+
+        import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
+
+        const socket = io('ws://localhost:3000');
+
+    </script>
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
@@ -33,9 +40,6 @@
             border: 1px solid rgba(0,0,0,.1);
 
         }	
-        :root{
-            color-scheme: light dark;
-        }
     </style>
 </head>
 <body>
